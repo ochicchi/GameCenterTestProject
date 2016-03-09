@@ -2,7 +2,7 @@
 //  GameCenterTestProjectUITests.swift
 //  GameCenterTestProjectUITests
 //
-//  Created by 大口 聡 on 2016/03/09.
+//  Created by Satoru Ohguchi on 2016/03/09.
 //  Copyright © 2016年 maripara.org. All rights reserved.
 //
 
