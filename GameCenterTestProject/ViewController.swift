@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameKit
 
 class ViewController: UIViewController {
 
@@ -20,6 +21,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // GameCenterログオン
+    @IBAction func GameCenterLogon(sender: AnyObject) {
+        // ログイン画面
+    }
 
+    /// GameCenter を閉じる
+    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController) {
+            dismissViewControllerAnimated(true, completion: nil)
+    }
 }
-

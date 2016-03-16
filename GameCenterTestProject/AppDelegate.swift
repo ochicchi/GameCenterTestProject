@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        // GKLocalPlayer を生成
+        let localPlayer = GKLocalPlayer.localPlayer()
+        
+        // 認証処理
+        localPlayer.authenticateHandler = {(loginVC, error) -> Void in
+            if GKLocalPlayer.localPlayer().authenticated {
+                // 認証成功
+                print("authenticated: ログイン確認処理：成功");
+            } else {
+                if loginVC != nil {
+                    print("Sign in")
+                    self.window!.rootViewController!.presentViewController(loginVC!, animated: true, completion: nil)
+                } else {
+                    print("ログイン確認処理：成功");
+                    if (error == nil){
+                        print("ログイン認証：成功");
+                    }else{
+                        print("ログイン認証：失敗");
+                    }
+                }
+            }
+        }
+
         return true
     }
 
