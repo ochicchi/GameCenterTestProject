@@ -9,7 +9,7 @@
 import UIKit
 import GameKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,GKGameCenterControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,13 @@ class ViewController: UIViewController {
         // ログイン画面
     }
 
+    // GameCenter
+    @IBAction func clickShow(sender: AnyObject) {
+        let game = GKGameCenterViewController()
+        game.gameCenterDelegate = self
+        self.presentViewController(game, animated: true, completion: nil)
+    }
+    
     /// GameCenter を閉じる
     func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController) {
             dismissViewControllerAnimated(true, completion: nil)
