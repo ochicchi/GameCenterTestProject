@@ -17,23 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYQ-Kh-cUa">
-                                <rect key="frame" x="87" y="78" width="147" height="30"/>
-                                <state key="normal" title="GameCenterログオン"/>
-                                <connections>
-                                    <action selector="GameCenterLogon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LJK-bh-RAh"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLt-aH-O56">
-                                <rect key="frame" x="79" y="128" width="162" height="30"/>
+                                <rect key="frame" x="63" y="68" width="195" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="GameCenterを表示する"/>
+                                <state key="normal" title="リーダーズボードを表示する"/>
                                 <connections>
                                     <action selector="clickShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oqW-9u-4Do"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="DmV-H8-c5f">
-                                <rect key="frame" x="170" y="178" width="100" height="30"/>
+                                <rect key="frame" x="170" y="108" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Age-AI-Iz1"/>
                                     <constraint firstAttribute="width" constant="100" id="RUL-T3-iZR"/>
@@ -48,7 +41,7 @@
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bO-rd-nR7">
-                                <rect key="frame" x="55" y="178" width="90" height="30"/>
+                                <rect key="frame" x="55" y="108" width="90" height="30"/>
                                 <state key="normal" title="スコアを更新"/>
                                 <connections>
                                     <action selector="ScoreUpdate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8lp-nd-5MO"/>
@@ -61,31 +54,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KF2-tX-0wD">
-                                <rect key="frame" x="108" y="228" width="105" height="30"/>
+                                <rect key="frame" x="108" y="188" width="105" height="30"/>
                                 <state key="normal" title="達成項目を更新"/>
                                 <connections>
                                     <action selector="clickAchievement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jl4-Th-6cs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ojs-1Y-Kvb">
-                                <rect key="frame" x="108" y="278" width="105" height="30"/>
+                                <rect key="frame" x="108" y="228" width="105" height="30"/>
                                 <state key="normal" title="達成項目を表示"/>
                                 <connections>
                                     <action selector="clickAchievementShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9bY-Hp-KIX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQY-rh-4Zr">
-                                <rect key="frame" x="115" y="328" width="90" height="30"/>
+                                <rect key="frame" x="115" y="268" width="90" height="30"/>
                                 <state key="normal" title="達成度を表示"/>
                                 <connections>
                                     <action selector="clickAchievementGet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KSe-3L-flF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2L-8c-0G2">
-                                <rect key="frame" x="100" y="378" width="120" height="30"/>
+                                <rect key="frame" x="100" y="308" width="120" height="30"/>
                                 <state key="normal" title="達成度をリセット"/>
                                 <connections>
                                     <action selector="clickAchievementReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B1g-A8-yXK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmu-g7-o6H">
+                                <rect key="frame" x="108" y="148" width="105" height="30"/>
+                                <state key="normal" title="ランキング確認"/>
+                                <connections>
+                                    <action selector="clickRankingCheck:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BX1-Qv-7kC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -93,31 +93,35 @@
                         <constraints>
                             <constraint firstItem="DmV-H8-c5f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="60" id="4Fq-Cz-T5n"/>
                             <constraint firstItem="lLt-aH-O56" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5eD-dH-zbO"/>
-                            <constraint firstItem="lLt-aH-O56" firstAttribute="top" secondItem="hYQ-Kh-cUa" secondAttribute="bottom" constant="20" id="EdG-yM-CmI"/>
+                            <constraint firstItem="zmu-g7-o6H" firstAttribute="top" secondItem="2bO-rd-nR7" secondAttribute="bottom" constant="10" id="EIV-SU-WZi"/>
                             <constraint firstItem="rx9-BN-nNT" firstAttribute="top" secondItem="lLt-aH-O56" secondAttribute="bottom" constant="20" id="Id5-GQ-hel"/>
-                            <constraint firstItem="DmV-H8-c5f" firstAttribute="top" secondItem="lLt-aH-O56" secondAttribute="bottom" constant="20" id="MFM-Mt-xKr"/>
+                            <constraint firstItem="DmV-H8-c5f" firstAttribute="top" secondItem="lLt-aH-O56" secondAttribute="bottom" constant="10" id="MFM-Mt-xKr"/>
                             <constraint firstItem="2bO-rd-nR7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-60" id="OXh-ld-nKg"/>
+                            <constraint firstItem="zmu-g7-o6H" firstAttribute="top" secondItem="S2L-8c-0G2" secondAttribute="bottom" constant="10" id="QFZ-8S-IAe"/>
                             <constraint firstItem="Ojs-1Y-Kvb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RI1-e5-w6L"/>
                             <constraint firstItem="hQY-rh-4Zr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ROf-AN-9nt"/>
-                            <constraint firstItem="2bO-rd-nR7" firstAttribute="top" secondItem="lLt-aH-O56" secondAttribute="bottom" constant="20" id="Usu-47-aer"/>
-                            <constraint firstItem="Ojs-1Y-Kvb" firstAttribute="top" secondItem="KF2-tX-0wD" secondAttribute="bottom" constant="20" id="VVi-Cz-7Q5"/>
-                            <constraint firstItem="hYQ-Kh-cUa" firstAttribute="top" secondItem="rx9-BN-nNT" secondAttribute="bottom" constant="20" id="Y4U-zS-I0D"/>
+                            <constraint firstItem="2bO-rd-nR7" firstAttribute="top" secondItem="lLt-aH-O56" secondAttribute="bottom" constant="10" id="Usu-47-aer"/>
+                            <constraint firstItem="Ojs-1Y-Kvb" firstAttribute="top" secondItem="KF2-tX-0wD" secondAttribute="bottom" constant="10" id="VVi-Cz-7Q5"/>
                             <constraint firstItem="DmV-H8-c5f" firstAttribute="top" secondItem="rx9-BN-nNT" secondAttribute="bottom" constant="20" id="aWb-la-qV1"/>
-                            <constraint firstItem="S2L-8c-0G2" firstAttribute="top" secondItem="hQY-rh-4Zr" secondAttribute="bottom" constant="20" id="bXn-MP-O2i"/>
+                            <constraint firstItem="S2L-8c-0G2" firstAttribute="top" secondItem="hQY-rh-4Zr" secondAttribute="bottom" constant="10" id="bXn-MP-O2i"/>
                             <constraint firstItem="rx9-BN-nNT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="cIw-0N-5f5"/>
                             <constraint firstItem="rx9-BN-nNT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eL8-jN-4fD"/>
                             <constraint firstItem="S2L-8c-0G2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gox-os-RWO"/>
-                            <constraint firstItem="KF2-tX-0wD" firstAttribute="top" secondItem="2bO-rd-nR7" secondAttribute="bottom" constant="20" id="oxR-Pj-gMg"/>
+                            <constraint firstItem="KF2-tX-0wD" firstAttribute="top" secondItem="zmu-g7-o6H" secondAttribute="bottom" constant="10" id="lsP-J8-dnf"/>
+                            <constraint firstItem="KF2-tX-0wD" firstAttribute="top" secondItem="2bO-rd-nR7" secondAttribute="bottom" constant="10" id="oxR-Pj-gMg"/>
                             <constraint firstItem="KF2-tX-0wD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="psj-la-P2k"/>
-                            <constraint firstItem="hYQ-Kh-cUa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qMD-sl-N16"/>
-                            <constraint firstItem="hQY-rh-4Zr" firstAttribute="top" secondItem="Ojs-1Y-Kvb" secondAttribute="bottom" constant="20" id="w84-2V-3Gm"/>
+                            <constraint firstItem="lLt-aH-O56" firstAttribute="top" secondItem="rx9-BN-nNT" secondAttribute="bottom" constant="10" id="tUc-S1-VW1"/>
+                            <constraint firstItem="hQY-rh-4Zr" firstAttribute="top" secondItem="Ojs-1Y-Kvb" secondAttribute="bottom" constant="10" id="w84-2V-3Gm"/>
                             <constraint firstItem="2bO-rd-nR7" firstAttribute="top" secondItem="rx9-BN-nNT" secondAttribute="bottom" constant="20" id="wSe-yz-hCX"/>
+                            <constraint firstItem="zmu-g7-o6H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="whT-dj-YuA"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Id5-GQ-hel"/>
                                 <exclude reference="wSe-yz-hCX"/>
+                                <exclude reference="Id5-GQ-hel"/>
+                                <exclude reference="QFZ-8S-IAe"/>
                                 <exclude reference="aWb-la-qV1"/>
+                                <exclude reference="oxR-Pj-gMg"/>
                             </mask>
                         </variation>
                     </view>

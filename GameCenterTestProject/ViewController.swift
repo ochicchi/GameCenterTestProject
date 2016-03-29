@@ -42,11 +42,12 @@ class ViewController: UIViewController,GKGameCenterControllerDelegate,UITextFiel
 //        }
     }
 
-    // GameCenter を表示する。
+    // GameCenter を表示する。(リーダーズボード)
     @IBAction func clickShow(sender: AnyObject) {
         let game = GKGameCenterViewController()
         game.gameCenterDelegate = self
         self.presentViewController(game, animated: true, completion: nil)
+        game.viewState = GKGameCenterViewControllerState.Leaderboards
         self.label1.text = "GameCenter表示中"
     }
     
@@ -84,6 +85,41 @@ class ViewController: UIViewController,GKGameCenterControllerDelegate,UITextFiel
                 self.label1.text = "GameCenterスコア送信完了"
             }
         });
+    }
+    
+    // ランキングを調査する
+    @IBAction func clickRankingCheck(sender: AnyObject) {
+        // 変数初期化
+        var localUserRank:Int = 999
+        
+        // 呼び出し時の条件指定
+        let leaderboard = GKLeaderboard()
+        
+        leaderboard.identifier  = "testBestScore"
+        leaderboard.playerScope = GKLeaderboardPlayerScope.Global
+        leaderboard.timeScope   = GKLeaderboardTimeScope.AllTime
+        leaderboard.range       = NSRange(location: 1,length: 10)
+        
+        let localUser = GKLocalPlayer.localPlayer().alias! as String
+        print("\(localUser)")
+        
+        // ゲームセンターデータ読み取り
+        leaderboard.loadScoresWithCompletionHandler { (scores, error) -> Void in
+            if (error == nil) {
+                // 取得したデータでループ
+                for score in scores! as [GKScore] {
+                    let scorePlayerUser = score.player.alias! as String
+                    // 自分のランキングを検索
+                    if (localUser == scorePlayerUser) {
+                        localUserRank = score.rank
+                    }
+                }
+                self.label1.text = "BestScore順位 = \(localUserRank)"
+            } else {
+                self.label1.text = "取得できませんでした"
+            }
+        }
+        // print("順位 = \(localUserRank)")
     }
     
     /// 達成項目を更新する
